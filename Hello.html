@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Feedback Form</title>
+ <style>
+ 
+ body {
+ font-family: Arial, sans-serif;
+ background-color: lightblue;
+ margin: 0;
+ padding: 0;
+ }
+ .form-container {
+ width: 420px;
+ background-color: #ffffff;
+ margin: 60px auto;
+ padding: 25px 30px;
+ border-radius: 12px;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
+ h2 {
+ text-align: center;
+ color: #333;
+ margin-bottom: 20px;
+ }
+ label {
+ display: block;
+ margin-top: 12px;
+ font-weight: bold;
+ color: #444;
+ }
+ input[type="text"],
+ input[type="email"],
+ select,
+ textarea {
+ width: 100%;
+ padding: 10px;
+ margin-top: 6px;
+ border: 1px solid #ccc;
+ border-radius: 6px;
+ font-size: 14px;
+ }
+ textarea {
+ resize: none;
+ }
+ input:focus,
+ select:focus,
+ textarea:focus {
+ border-color: #5b9bd5;
+ outline: none;
+ }
+ .submit-btn {
+ width: 100%;
+ margin-top: 20px;
+ padding: 12px;
+ background-color: #5b9bd5;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+hover: true;
+ }
+ .submit-btn:hover {
+ background-color: #2f75b5;
+transform: scale(1.05);
+ }
+ </style>
+</head>
+<body>
+ <div class="form-container">
+ <h2>Feedback Form</h2>
+ <form>
+ <!-- Text Box -->
+ <label for="name">Name</label>
+ <input type="text" id="name" placeholder="Enter your name">
+ <!-- Text Box -->
+ <label for="email">Email</label>
+ <input type="email" id="email" placeholder="Enter your email">
+ <!-- Dropdown List -->
+ <label for="rating">Rate Our Service</label>
+ <select id="rating">
+ <option>Select Rating</option>
+ <option>Excellent</option>
+ <option>Very Good</option>
+ <option>Good</option>
+ <option>Average</option>
+ <option>Poor</option>
+ </select>
+ <!-- Textarea -->
+ <label for="feedback">Your Feedback</label>
+ <textarea id="feedback" rows="4" placeholder="Write your feedback
+here..."></textarea>
+ <!-- Submit Button -->
+ <input type="submit" value="Submit Feedback" class="submit-btn" >
+ </form>
+ </div>
+ <button onclick="showMsg()">Click Me</button>
+
+<script>
+function showMsg() {
+    alert("Welcome to Web Programming Lab!");
+}
+</script>
+<p id="text">Original Text</p>
+<button onclick="changeText()">Change Text</button>
+
+<script>
+function changeText() {
+    document.getElementById("text").innerHTML = "Text Changed Successfully!";
+}
+</script>
+
+<script>
+function validate() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name == "" || email == "") {
+        alert("All fields are required");
+        return false;
+    }
+    alert("Login Successful");
+}
+</script>
+
+</body>
+</html>
